@@ -1,6 +1,6 @@
 # Fully Homomorphic Encryption Studio
 
-FHE-Studio.com is an open source IDE for anyone who want to create programs that process encrypted data.
+[FHE-Studio.com](https://fhe-studio.com) is an open source IDE for anyone who want to create programs that process encrypted data.
 
 # What is Homomorphic Encryption
 
