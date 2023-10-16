@@ -12,6 +12,9 @@ For example, if your encrypted salary is represented as "X" and you want to calc
 
 So, in a nutshell, homomorphic encryption is like having a secure mathematical superpower that lets you manipulate encrypted data without exposing the sensitive information it contains. It's an essential tool for protecting data privacy in various applications, including secure computation and data analytics.
 
+[More on FHE Business value](why-fhe.md)
+
+
 # FHE program
 
 ## 1. Choose From A List of Available Circuits
