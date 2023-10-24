@@ -56,3 +56,43 @@ def circuit(x):
 
 inputset = range(4)
 ```
+
+### Matrix Multiplication
+```python
+import numpy as np
+a = [[1,2]]
+
+@fhe.compiler({"x": "encrypted", "b": "encrypted"})
+def circuit(x, b):
+    m = np.matmul(a,x)
+    return np.sum(m) + b
+
+inputset = [([1,2],3)]
+```
+
+### Linear Regression
+```python
+import numpy as np
+
+# TFHE support only integers, so we need to quantify floats to ints
+#
+# Quantization could be a bit more complex to reach the better results, 
+# more is here https://huggingface.co/docs/optimum/concept_guides/quantization
+def qvalues(values):
+    return np.rint(np.array(values) * 127. + 0 ).astype(np.int8)
+
+#linear model intercept
+intercept = qvalues([-.53]).item()
+
+#linear model coefs
+theta = [ qvalues([0.3, .1, .2]) ] 
+
+@fhe.compiler({"x": "encrypted"})
+def circuit(x):
+    m = np.matmul(theta,x)
+    # keep in mind, the decrypted value needs to be devided by 127*127
+    #to dequantifized because of matmul at the previous step
+    return np.sum(m) + intercept
+
+inputset = [ qvalues([-.9, -.9, -.9]), qvalues([.9, .9, .9]) ]
+```
