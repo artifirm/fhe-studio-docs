@@ -14,15 +14,27 @@ Please note, the `comparison` is implemented also using lookup tables, so it not
 
 # FHE Circuit Source 
 
-Here is an example of basic circuit that adds 42 to an encrypted number:
+Here is an example of basic circuit that adds two numbers:
 ```python
-@fhe.compiler({"x": "encrypted"})
-def circuit(x):
-    return x + 42
+from concrete import fhe
 
-inputset = range(10)
+def add(x, y):
+    return x + y
+
+compiler = fhe.Compiler(add, {"x": "encrypted", "y": "clear"})
+
+inputset = [(2, 3), (0, 0), (1, 6), (7, 7), (7, 1)]
+circuit = compiler.compile(inputset)
+
+x = 4
+y = 4
+
+clear_evaluation = add(x, y)
+homomorphic_evaluation = circuit.encrypt_run_decrypt(x, y)
+
+print(x, "+", y, "=", clear_evaluation, "=", homomorphic_evaluation)
 ```
-The entrypoint should have the name `circuit`. The parameters needs to be annotated with either `encrypted` or `clear`. <br/>
+<br/>
 
 The circuit operates with binary data behind the scenes and it needs to know how many bits of internal variable should be sufficient to evaluate incoming encrypted data. <br>
 For this reason we have to give few examples of input data, e.g. 
