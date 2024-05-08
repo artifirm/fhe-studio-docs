@@ -14,6 +14,15 @@ So, in a nutshell, homomorphic encryption is like having a secure mathematical s
 
 [More on FHE Business value](why-fhe.md)
 
+# FHE Studio
+The objective of this project is to create a user-friendly, open-source IDE specifically tailored for fully homomorphic encryption (FHE) development. FHE is a groundbreaking technology with immense potential to protect sensitive data while still allowing for computation on encrypted data. Existing encryption methods, like AES and RSA, protect data at rest and in transit, but the data must be decrypted for processing. This exposes it to potential breaches and insider threats during the processing stage. FHE stays always encrypted while processing, decrypting the final result(s) only.
+
+FHE-Studio.com is a free open source IDE for anyone who wants to create programs that process encrypted data & AI models. FHE significantly simplifies the cyber security architecture. Unlike Zero Trust, which requires intricate security layers and policies, FHE integrates into public clouds with minimal disruption.
+
+FHE is considered one of the most promising cryptographic technologies to address the security challenges posed by quantum computing, often referred to as the "post-quantum" era, which makes it a favourable cybersecurity choice for public data sharing (e.g. Blockchain)
+
+However, it remains a complex and resource-intensive field. Therefore, an intuitive and accessible development environment is essential for advancing FHE applications and expanding its adoption.
+
 
 # FHE program
 
