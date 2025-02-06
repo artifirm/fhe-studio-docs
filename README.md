@@ -2,7 +2,7 @@
 
 [FHE-Studio.com](https://fhe-studio.com) is an open source IDE for anyone who want to create programs that process encrypted data.
 
-[Coding in Cipher: Encrypted Data Structures and Algorithms](https://towardsdatascience.com/coding-in-cipher-encrypted-data-structures-and-algorithms-dd99e584a655/)
+[FHE-Studio.com](https://fhe-studio.com) Tutorial: [Coding in Cipher: Encrypted Data Structures and Algorithms](https://towardsdatascience.com/coding-in-cipher-encrypted-data-structures-and-algorithms-dd99e584a655/)
 
 # What is Homomorphic Encryption
 
