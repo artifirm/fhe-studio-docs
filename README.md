@@ -2,6 +2,8 @@
 
 [FHE-Studio.com](https://fhe-studio.com) is an open source IDE for anyone who want to create programs that process encrypted data.
 
+[Coding in Cipher: Encrypted Data Structures and Algorithms](https://towardsdatascience.com/coding-in-cipher-encrypted-data-structures-and-algorithms-dd99e584a655/)
+
 # What is Homomorphic Encryption
 
 Homomorphic encryption is a cryptographic technique that allows you to perform operations on encrypted data without needing to decrypt it first. This is valuable in situations where privacy and security are paramount, such as in cloud computing or data outsourcing scenarios.
